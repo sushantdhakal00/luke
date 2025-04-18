@@ -120,25 +120,6 @@
     <style>
         /* Default: Placeholder visible */
 
-        .vimeo-bg:not([data-vimeo-playing="true"])+.vimeo-bg__placeholder {
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-
-        /* Hide placeholder only when video is actually playing */
-
-        .vimeo-bg[data-vimeo-playing="true"]+.vimeo-bg__placeholder {
-            opacity: 0;
-            transition-delay: 0.2s;
-        }
-
-        /* Ensure smooth fade-in transitions for video */
-
-        .vimeo-bg {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
         /* DESKTOP & MOBILE: Show video when hovered or tapped */
 
         .work-inner:hover .vimeo-bg,
@@ -741,6 +722,81 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
             </div>
         </div>
     </div>
+
+    <section class="section-work">
+        <div style="opacity:0" class="overlay fade-right"></div>
+        <div style="opacity:0" class="overlay fade-left"></div>
+        <div style="-webkit-transform:translate3d(100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+            class="work">
+            <div class="slider-wrap w-dyn-list">
+                <div data-slider="list" role="list" class="slider-list w-dyn-items">
+                    <div data-slider="slide" role="listitem" class="slider-slide w-dyn-item">
+                        <div data-w-id="e9bbf239-43c7-f7a9-43f2-462f4b6b36a5" class="slider-slide">
+                            <div data-cursor="Visit website" scramble-btn="" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                class="work-inner">
+                                <div class="work-media"><img src="data:image/jpeg;base64,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" loading="lazy" alt="" sizes="100vw" srcset="https://cdn.prod.website-files.com/67950b7dcea26620ba1f5572/67f4225e50ef3d6b02214271_LUKEco-thumb-p-500.jpg 500w, https://cdn.prod.website-files.com/67950b7dcea26620ba1f5572/67f4225e50ef3d6b02214271_LUKEco-thumb-p-800.jpg 800w, https://cdn.prod.website-files.com/67950b7dcea26620ba1f5572/67f4225e50ef3d6b02214271_LUKEco-thumb-p-1080.jpg 1080w, https://cdn.prod.website-files.com/67950b7dcea26620ba1f5572/67f4225e50ef3d6b02214271_LUKEco-thumb.jpg 1200w"
+                                        class="vimeo-bg__placeholder" />
+                                   
+                                </div>
+                                <div style="-webkit-transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="work-caption-hover">
+                                    
+                                </div>
+                                <div class="work-caption hide-mobile">
+                                    <div class="work-caption_txt">
+                                        <div class="work-caption_eyebrow">
+                                            <div class="text-size-regular opacity-75">Website:</div>
+                                        </div>
+                                        <div class="work-url">
+                                            <div scramble-hover="" class="text-size-regular">lucktherock.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="label text-size-regular is-work">
+                                        <div>LUKE THE ROCK</div>
+                                    </div>
+                                </div>
+                                <div class="work-caption show-mobile">
+                                    <div scramble-hover="" class="text-size-regular">LUKE &amp; Co.</div>
+                                    <div class="label text-size-regular is-work">
+                                        <div>Visit website</div><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 16 15" fill="none" class="icon-12px"><path d="M2.03115 13.2616L14.0104 1.28234M14.0104 1.28234L14.0104 12.5961M14.0104 1.28234L2.69666 1.28234" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path></svg></div>
+                                </div><a aria-label="Visit website" href="https://LUKE.com" target="_blank" class="work-link w-inline-block"></a></div>
+                        </div>
+                    </div>
+                    
+                    
+                    </div>
+                    <div data-slider="slide" role="listitem" class="slider-slide w-dyn-item">
+                        <div data-w-id="e9bbf239-43c7-f7a9-43f2-462f4b6b36a5" class="slider-slide">
+                            <div data-cursor="Visit website" scramble-btn="" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                class="work-inner">
+                               
+                                
+                                
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+            class="work-pagination">
+            <div class="work-nav-row"><button aria-label="previous slide" data-slider="button-prev" class="slider-button"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="button-arrow prev"><path d="M2.91697 12.2499L2.91697 1.74995C2.91731 1.64364 2.94663 1.53944 3.00178 1.44856C3.05693 1.35767 3.13582 1.28355 3.22996 1.23417C3.3241 1.18479 3.42993 1.16202 3.53605 1.16831C3.64218 1.1746 3.74457 1.20971 3.83222 1.26987L11.4156 6.51987C11.73 6.73745 11.73 7.26128 11.4156 7.47945L3.83222 12.7294C3.74475 12.7902 3.64231 12.8259 3.53601 12.8325C3.42971 12.8391 3.32363 12.8165 3.22928 12.7671C3.13494 12.7176 3.05595 12.6433 3.00089 12.5521C2.94583 12.461 2.9168 12.3565 2.91697 12.2499Z" fill="currentColor"></path></svg></button>
+                <button
+                    data-w-id="b5c135fd-08c7-b750-ac60-86cbcb985a82" aria-label="previous slide" data-slider="button-next" class="slider-button"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="button-arrow"><path d="M2.91697 12.2499L2.91697 1.74995C2.91731 1.64364 2.94663 1.53944 3.00178 1.44856C3.05693 1.35767 3.13582 1.28355 3.22996 1.23417C3.3241 1.18479 3.42993 1.16202 3.53605 1.16831C3.64218 1.1746 3.74457 1.20971 3.83222 1.26987L11.4156 6.51987C11.73 6.73745 11.73 7.26128 11.4156 7.47945L3.83222 12.7294C3.74475 12.7902 3.64231 12.8259 3.53601 12.8325C3.42971 12.8391 3.32363 12.8165 3.22928 12.7671C3.13494 12.7176 3.05595 12.6433 3.00089 12.5521C2.94583 12.461 2.9168 12.3565 2.91697 12.2499Z" fill="currentColor"></path></svg></button>
+            </div>
+            <div class="work-count-row">
+                <div class="count-column">
+                    <h2 data-slide-count="step" class="count-heading">01</h2>
+                </div>
+                <div class="count-row-divider"></div>
+                <div class="count-column">
+                    <h2 data-slide-count="total" class="count-heading">04</h2>
+                </div>
+            </div>
+            <div class="swipe-lottie" data-w-id="c342e882-4816-bb3e-3698-8efa01e4674a" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/67950b7dcea26620ba1f553c/67a3bd97de56244f12904828_Animation%20-%201738784103280.lottie" data-loop="1"
+                data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="1.8"></div>
+        </div>
+    </section>
     <div class="menu">
         <div class="menu_wrapper">
             <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
@@ -774,7 +830,7 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
         <div class="main_container">
             <div class="main_heading">
                 <h1 data-w-id="b54ee9c3-b27b-bb58-a468-cef074ffb9a1" style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1"
-                    class="heading-m">Hi ! , I am Luke the rock. WTF do you want me to put here ?</h1>
+                    class="heading-m"><h1>Hi ! </h1><h3> I am Lukethe rock. WTF do you want me to put here ?</h3>
             </div>
             <div style="-webkit-transform:translate3d(0, 120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
                 class="main_work">
@@ -859,25 +915,8 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
     
             </div>
         </div>
-        <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-            class="work-pagination">
-            <div class="work-nav-row"><button aria-label="previous slide" data-slider="button-prev" class="slider-button"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="button-arrow prev"><path d="M2.91697 12.2499L2.91697 1.74995C2.91731 1.64364 2.94663 1.53944 3.00178 1.44856C3.05693 1.35767 3.13582 1.28355 3.22996 1.23417C3.3241 1.18479 3.42993 1.16202 3.53605 1.16831C3.64218 1.1746 3.74457 1.20971 3.83222 1.26987L11.4156 6.51987C11.73 6.73745 11.73 7.26128 11.4156 7.47945L3.83222 12.7294C3.74475 12.7902 3.64231 12.8259 3.53601 12.8325C3.42971 12.8391 3.32363 12.8165 3.22928 12.7671C3.13494 12.7176 3.05595 12.6433 3.00089 12.5521C2.94583 12.461 2.9168 12.3565 2.91697 12.2499Z" fill="currentColor"></path></svg></button>
-                <button
-                    data-w-id="b5c135fd-08c7-b750-ac60-86cbcb985a82" aria-label="previous slide" data-slider="button-next" class="slider-button"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="button-arrow"><path d="M2.91697 12.2499L2.91697 1.74995C2.91731 1.64364 2.94663 1.53944 3.00178 1.44856C3.05693 1.35767 3.13582 1.28355 3.22996 1.23417C3.3241 1.18479 3.42993 1.16202 3.53605 1.16831C3.64218 1.1746 3.74457 1.20971 3.83222 1.26987L11.4156 6.51987C11.73 6.73745 11.73 7.26128 11.4156 7.47945L3.83222 12.7294C3.74475 12.7902 3.64231 12.8259 3.53601 12.8325C3.42971 12.8391 3.32363 12.8165 3.22928 12.7671C3.13494 12.7176 3.05595 12.6433 3.00089 12.5521C2.94583 12.461 2.9168 12.3565 2.91697 12.2499Z" fill="currentColor"></path></svg></button>
-            </div>
-            <div class="work-count-row">
-                <div class="count-column">
-                    <h2 data-slide-count="step" class="count-heading">01</h2>
-                </div>
-                <div class="count-row-divider"></div>
-                <div class="count-column">
-                    <h2 data-slide-count="total" class="count-heading">04</h2>
-                </div>
-            </div>
-            <div class="swipe-lottie" data-w-id="c342e882-4816-bb3e-3698-8efa01e4674a" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/67950b7dcea26620ba1f553c/67a3bd97de56244f12904828_Animation%20-%201738784103280.lottie" data-loop="1"
-                data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="1.8"></div>
-        </div>
-    </section>
+       
+
     <div class="spline-trigger-mobile"></div>
     </div>
     <div data-notification-3D="" class="spline-notification">
@@ -1139,36 +1178,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }));
     </script>
 
-    <!-- Vimeo Background -->
-    <script>
-        function initVimeoBGVideo() {
-            document.querySelectorAll("[data-vimeo-bg-init]").forEach((function(t) {
-                const e = t.getAttribute("data-vimeo-video-id");
-                if (!e) return;
-                const i = `https://player.vimeo.com/video/${e}?api=1&background=1&autoplay=0&loop=1&muted=1`,
-                    a = t.querySelector("iframe");
-                a.setAttribute("src", i);
-                const o = new Vimeo.Player(a);
-                o.setVolume(0), t.setAttribute("data-vimeo-loaded", "false"), t.setAttribute("data-vimeo-playing", "false"), o.on("loaded", (function() {
-                    t.setAttribute("data-vimeo-loaded", "true")
-                })), o.on("play", (function() {
-                    t.setAttribute("data-vimeo-playing", "true")
-                }));
-                const n = t.closest(".work-inner");
-                n && (n.addEventListener("mouseenter", (() => {
-                    t.setAttribute("data-vimeo-activated", "true"), t.setAttribute("data-vimeo-playing", "true"), t.style.opacity = "1", o.setCurrentTime(.1).then((() => o.play()))
-                })), n.addEventListener("mouseleave", (() => {
-                    t.setAttribute("data-vimeo-activated", "false"), t.setAttribute("data-vimeo-playing", "false"), t.style.opacity = "0", o.pause()
-                })), n.addEventListener("click", (() => {
-                    t.setAttribute("data-vimeo-activated", "true"), t.setAttribute("data-vimeo-playing", "true"), t.style.opacity = "1", o.setCurrentTime(.1).then((() => o.play()))
-                })))
-            }))
-        }
-        document.addEventListener("DOMContentLoaded", (function() {
-            initVimeoBGVideo()
-        }));
-    </script>
-
+    
     <!-- Menu Switch-->
     <script>
         let currentPosition = 1;
